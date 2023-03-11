@@ -2,7 +2,7 @@ class DSU :
     def __init__(self, n: int):
         self.par = list(range(n))
         self.rnk = [0] * (n)
-        self.c = 0
+        self.c = n
         
     def find(self, i: int) -> int:
             if self.par[i] != i:
