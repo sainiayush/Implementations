@@ -23,10 +23,8 @@ class DSU {
       return c;
   }
   public Boolean merge(int i, int j) {
-    if ((i = find(i)) == (j = find(j))) {
-        c --;
-        return false;
-    }
+    if ((i = find(i)) == (j = find(j))) return false;
+    else --c;
     if (rnk[i] > rnk[j]) swap(i, j);
     par[i] = j;
     if (rnk[i] == rnk[j]) rnk[j]++;
